@@ -68,7 +68,7 @@ public class ActivityActualizarContacto extends AppCompatActivity {
             {
                 String cadena = adapterView.getSelectedItem().toString();
 
-                //Quitar los caracteres del combobox para obtener solo el codigo del pais
+
                 codigoPaisSeleccionado = Integer.valueOf(extraerNumeros(cadena).toString().replace("]","").replace("[",""));
 
             }
@@ -108,7 +108,6 @@ public class ActivityActualizarContacto extends AppCompatActivity {
     private void ObtenerListaPaises() {
         Pais pais = null;
         lista = new ArrayList<Pais>();
-        //conexion = new SQLiteConexion(this, Transacciones.NameDatabase,null,1);
         SQLiteDatabase db = conexion.getReadableDatabase();
 
         Cursor cursor = db.rawQuery("SELECT * FROM " + Transacciones.tblPaises,null);
@@ -139,7 +138,7 @@ public class ActivityActualizarContacto extends AppCompatActivity {
     }
 
     private void EditarContacto() {
-        //SQLiteConexion conexion = new SQLiteConexion(this, Transacciones.NameDatabase,null,1);
+
         SQLiteDatabase db = conexion.getWritableDatabase();
 
         String ObjCodigo = codigo.getText().toString();
@@ -156,7 +155,7 @@ public class ActivityActualizarContacto extends AppCompatActivity {
             db.close();
             Toast.makeText(getApplicationContext(),"Se actualizo correctamente", Toast.LENGTH_SHORT).show();
 
-            //volver abrir la ventana
+
             Intent intent = new Intent(this, ActivityListadoContacto.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);

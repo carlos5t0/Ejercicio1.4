@@ -57,8 +57,8 @@
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/floatAgregarPais"
-                    android:layout_width="287dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:clickable="true"
@@ -70,16 +70,16 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="7dp"
+                android:layout_height="5dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:text="Pais" />
 
             <Spinner
                 android:id="@+id/cmbPais"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="3dp"
+                android:layout_height="2dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp" />
 
@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:text="Nombre completo" />
+                android:text="Nombre " />
 
             <EditText
                 android:id="@+id/txtNombreCompleto"
@@ -102,16 +102,16 @@
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="6dp"
+                android:layout_height="5dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:text="Telefono" />
 
             <EditText
                 android:id="@+id/txtTelefono"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="5dp"
+                android:layout_height="2dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:ems="10"
@@ -123,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:text="Nota" />
+                android:text="Descripcion" />
 
             <EditText
                 android:id="@+id/txtNota"
@@ -143,7 +143,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:backgroundTint="#CDDC39"
-                android:text="Guardar Contacto" />
+                android:text="Guardar Imagen" />
 
             <Button
                 android:id="@+id/btnListar"
@@ -152,7 +152,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:backgroundTint="#CDDC39"
-                android:text="Contacto Guardados" />
+                android:text="Lista Imagenes" />
 
             <TextView
                 android:id="@+id/textView6"

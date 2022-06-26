@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Ir a la ventaja de ingresar nuevo pais
+
                 Intent intent = new Intent(getApplicationContext(),ActivityPais.class);
                 startActivity(intent);
 
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         btnGuardarContacto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //valida que los datos esten ingresados, antes de guardar
+
 
 
                 try {
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 String cadena = adapterView.getSelectedItem().toString();
 
-                //Quitar los caracteres del combobox para obtener solo el codigo del pais
+
                 codigoPaisSeleccionado = Integer.valueOf(extraerNumeros(cadena).toString().replace("]","").replace("[",""));
 
             }
@@ -198,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void validarDatos() {
+        /*
         if (lista_paises.size() == 0){
             Toast.makeText(getApplicationContext(), "Debe de ingresar un Pais" ,Toast.LENGTH_LONG).show();
         }else  if (nombreCompleto.getText().toString().equals("")){
@@ -207,12 +208,14 @@ public class MainActivity extends AppCompatActivity {
         }else if (nota.getText().toString().equals("")){
             Toast.makeText(getApplicationContext(), "Debe de escribir una nota" ,Toast.LENGTH_LONG).show();
         }else{
+
+         */
             guardarContacto(imagen);
         }
-    }
+    //}
 
     private void guardarContacto(Bitmap bitmap) {
-        //SQLiteConexion conexion = new SQLiteConexion(this, Transacciones.NameDatabase, null, 1);
+
 
         db = conexion.getWritableDatabase();
 
@@ -237,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
         db.close();
 
 
-        //volver abrir la ventana
+
         Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
@@ -247,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
     private void ObtenerListaPaises() {
         Pais pais = null;
         lista = new ArrayList<Pais>();
-        //conexion = new SQLiteConexion(this, Transacciones.NameDatabase,null,1);
+
         db = conexion.getReadableDatabase();
 
         Cursor cursor = db.rawQuery("SELECT * FROM " + Transacciones.tblPaises,null);
@@ -275,9 +278,6 @@ public class MainActivity extends AppCompatActivity {
         {
             lista_paises.add(lista.get(i).getNombrePais()+" ( "+lista.get(i).getCodigo()+" )");
         }
-        /*
-        if (lista.size() == 0){
-            lista_paises.add("Honduras (504)");
-        }*/
+
     }
 }

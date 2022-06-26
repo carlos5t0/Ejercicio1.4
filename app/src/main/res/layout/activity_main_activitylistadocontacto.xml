@@ -62,8 +62,8 @@
 
                 <Button
                     android:id="@+id/btnCompartir"
-                    android:layout_width="66dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="24dp"
+                    android:layout_height="10dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
@@ -99,8 +99,8 @@
 
                 <Button
                     android:id="@+id/btnaclEliminarContacto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="64dp"
+                    android:layout_height="2dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
@@ -111,8 +111,8 @@
 
                 <Button
                     android:id="@+id/btnActualizarContacto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="147dp"
+                    android:layout_height="7dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
